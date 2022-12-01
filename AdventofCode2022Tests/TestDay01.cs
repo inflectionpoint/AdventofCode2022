@@ -2,24 +2,28 @@ using AdventofCode2022;
 
 namespace AdventofCode2022Tests
 {
-    public class Test01
+    public class TestDay01
     {
+        private readonly string basePathPuzzle;
+        private readonly string basePathSample;
         private readonly ITestOutputHelper output;
 
-        public Test01(ITestOutputHelper output)
+        public TestDay01(ITestOutputHelper output)
         {
             this.output = output;
+            string day = GetType().Name.Substring(7);
+            basePathPuzzle = Common.BasePath + $"Input{day}.txt";
+            basePathSample = Common.BasePath + $"Sample{day}.txt";
         }
 
         [Fact]
         public void CheckIfMaxCaloriesEquals()
         {
             //Arrange
-            string path = @"C:\Users\APK\source\repos\AdventofCode2022\Sample01.txt";
-            Solver01 puzzle = new(path);
+            SolveDay01 puzzle = new(basePathSample);
 
             //Act
-            int maxCalories = puzzle.FindMaxCalories();
+            int maxCalories = puzzle.MaxCalories;
             output.WriteLine(maxCalories.ToString());
 
             //Assert
@@ -31,11 +35,10 @@ namespace AdventofCode2022Tests
         public void ComputeNonZeroCalories()
         {
             //Arrange
-            string path = @"C:\Users\APK\source\repos\AdventofCode2022\Input01.txt";
-            Solver01 puzzle = new(path);
+            SolveDay01 puzzle = new(basePathPuzzle);
 
             //Act
-            int maxCalories = puzzle.FindMaxCalories();
+            int maxCalories = puzzle.MaxCalories;
             output.WriteLine(maxCalories.ToString());
 
             //Assert
@@ -47,11 +50,10 @@ namespace AdventofCode2022Tests
         public void CheckIfTopThreeCaloriesEquals()
         {
             //Arrange
-            string path = @"C:\Users\APK\source\repos\AdventofCode2022\Sample01.txt";
-            Solver01 puzzle = new(path);
+            SolveDay01 puzzle = new(basePathSample);
 
             //Act
-            int topThreeCalories = puzzle.FindTopThreeCalories();
+            int topThreeCalories = puzzle.TopThreeCalories;
             output.WriteLine(topThreeCalories.ToString());
 
             //Assert
@@ -63,18 +65,15 @@ namespace AdventofCode2022Tests
         public void ComputeNonZeroTopThreeCalories()
         {
             //Arrange
-            string path = @"C:\Users\APK\source\repos\AdventofCode2022\Input01.txt";
-            Solver01 puzzle = new(path);
+            SolveDay01 puzzle = new(basePathPuzzle);
 
             //Act
-            int topThreeCalories = puzzle.FindTopThreeCalories();
+            int topThreeCalories = puzzle.TopThreeCalories;
             output.WriteLine(topThreeCalories.ToString());
 
             //Assert
             Assert.True(topThreeCalories > 0);
 
         }
-
-
     }
 }
