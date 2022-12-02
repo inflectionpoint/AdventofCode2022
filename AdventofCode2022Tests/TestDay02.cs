@@ -28,7 +28,7 @@ namespace AdventofCode2022Tests
             output.WriteLine(partA.ToString());
 
             //Assert
-            Assert.Equal(45000, partA);
+            Assert.Equal(15, partA);
         }
 
         [Fact]
@@ -42,7 +42,7 @@ namespace AdventofCode2022Tests
             output.WriteLine(partB.ToString());
 
             //Assert
-            Assert.Equal(45000, partB);
+            Assert.Equal(12, partB);
         }
 
         [Fact]

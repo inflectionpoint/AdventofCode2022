@@ -2,12 +2,12 @@
 {
     public class SolveDay01
     {
-        //Properties
+        //PROPERTIES
 
         /// <summary>
         /// File path for the data source
         /// </summary>
-        private string InputFile;
+        private readonly string InputFile;
         
         /// <summary>
         /// A list elves with total calorie count for each elf
@@ -24,10 +24,8 @@
         /// </summary>
         public int TopThreeCalories => FindTopThreeCalories();
 
-        /// <summary>
-        /// Generate the solver with the required 
-        /// </summary>
-        /// <param name="path"></param>
+
+        //CONSTRUCTOR
         public SolveDay01(string dataFilePath)
         {
             Elves = new List<int>();
@@ -35,13 +33,15 @@
             PouplateElfData();
         }
 
+
+        //METHODS
+
         /// <summary>
         /// Logic to Transform Data to Solve Questions:
         /// Populate the list of Elf from the text file
         /// </summary>
         private void PouplateElfData()
         {
-            //Elf Identifier
             int calorieSum = 0;
 
             //Parse every line in the Data file
@@ -63,7 +63,7 @@
                 }
             }
 
-            //Last Elf
+            //Include Last Elf
             Elves.Add(calorieSum);
         }
 
@@ -71,7 +71,6 @@
         /// Part 1 Question:
         /// Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?
         /// </summary>
-        /// <returns></returns>
         private int FindMaxCalories()
         {
             return Elves.Max();
@@ -81,7 +80,6 @@
         /// Part 2 Question:
         /// Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?
         /// </summary>
-        /// <returns></returns>
         private int FindTopThreeCalories()
         {
             return Elves.OrderByDescending(v => v).Take(3).Sum();
