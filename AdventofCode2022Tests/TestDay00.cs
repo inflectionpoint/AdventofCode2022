@@ -2,13 +2,13 @@
 
 namespace AdventofCode2022Tests
 {
-    public class TestDay02
+    public class TestDay00
     {
         private readonly string basePathPuzzle;
         private readonly string basePathSample;
         private readonly ITestOutputHelper output;
 
-        public TestDay02(ITestOutputHelper output)
+        public TestDay00(ITestOutputHelper output)
         {
             this.output = output;
             string day = GetType().Name.Substring(7);
@@ -20,35 +20,35 @@ namespace AdventofCode2022Tests
         public void TestCaseA()
         {
             //Arrange
-            SolveDay02 puzzle = new(basePathSample);
+            SolveDay00 puzzle = new(basePathSample);
 
             //Act
             int partA = puzzle.PartA;
             output.WriteLine(partA.ToString());
 
             //Assert
-            Assert.Equal(15, partA);
+            Assert.Equal(0, partA);
         }
 
         [Fact]
         public void TestCaseB()
         {
             //Arrange
-            SolveDay02 puzzle = new(basePathSample);
+            SolveDay00 puzzle = new(basePathSample);
 
             //Act
             int partB = puzzle.PartB;
             output.WriteLine(partB.ToString());
 
             //Assert
-            Assert.Equal(12, partB);
+            Assert.Equal(0, partB);
         }
 
         [Fact]
         public void TestCaseANonZero()
         {
             //Arrange
-            SolveDay02 puzzle = new(basePathPuzzle);
+            SolveDay00 puzzle = new(basePathPuzzle);
 
             //Act
             int partA = puzzle.PartA;
@@ -62,7 +62,7 @@ namespace AdventofCode2022Tests
         public void TestCaseBNonZero()
         {
             //Arrange
-            SolveDay02 puzzle = new(basePathPuzzle);
+            SolveDay00 puzzle = new(basePathPuzzle);
 
             //Act
             int partB = puzzle.PartB;

@@ -1,7 +1,4 @@
-﻿using System.Text.RegularExpressions;
-using static System.Formats.Asn1.AsnWriter;
-
-namespace AdventofCode2022
+﻿namespace AdventofCode2022
 {
     public class SolveDay02
     {
