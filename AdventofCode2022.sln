@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prompts", "Prompts", "{FE63
 	ProjectSection(SolutionItems) = preProject
 		Puzzle01.txt = Puzzle01.txt
 		Puzzle02.txt = Puzzle02.txt
+		Puzzle03.txt = Puzzle03.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventofCode2022Tests", "AdventofCode2022Tests\AdventofCode2022Tests.csproj", "{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}"
@@ -17,12 +18,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Puzzle Input", "Puzzle Inpu
 	ProjectSection(SolutionItems) = preProject
 		Input01.txt = Input01.txt
 		Input02.txt = Input02.txt
+		Input03.txt = Input03.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Input", "Sample Input", "{7DA243B2-DD15-450F-A9F2-18DA9ABDE516}"
 	ProjectSection(SolutionItems) = preProject
 		Sample01.txt = Sample01.txt
 		Sample02.txt = Sample02.txt
+		Sample03.txt = Sample03.txt
 	EndProjectSection
 EndProject
 Global

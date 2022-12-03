@@ -7,7 +7,7 @@
         /// <summary>
         /// File path for the data source
         /// </summary>
-        private string InputFile;
+        private readonly string InputFile;
 
         /// <summary>
         /// The Answer to Part A

@@ -2,13 +2,13 @@
 
 namespace AdventofCode2022Tests
 {
-    public class TestDay00
+    public class TestDay03
     {
         private readonly string basePathPuzzle;
         private readonly string basePathSample;
         private readonly ITestOutputHelper output;
 
-        public TestDay00(ITestOutputHelper output)
+        public TestDay03(ITestOutputHelper output)
         {
             this.output = output;
             string day = GetType().Name[7..];
@@ -20,38 +20,38 @@ namespace AdventofCode2022Tests
         public void TestCaseA()
         {
             //Arrange
-            SolveDay00 puzzle = new(basePathSample);
+            SolveDay03 puzzle = new(basePathSample);
 
             //Act
-            int partA = puzzle.PartA;
+            int partA = puzzle.PrioritySumA;
             output.WriteLine(partA.ToString());
 
             //Assert
-            Assert.Equal(0, partA);
+            Assert.Equal(157, partA);
         }
 
         [Fact]
         public void TestCaseB()
         {
             //Arrange
-            SolveDay00 puzzle = new(basePathSample);
+            SolveDay03 puzzle = new(basePathSample);
 
             //Act
-            int partB = puzzle.PartB;
+            int partB = puzzle.PriortySumB;
             output.WriteLine(partB.ToString());
 
             //Assert
-            Assert.Equal(0, partB);
+            Assert.Equal(70, partB);
         }
 
         [Fact]
         public void TestCaseANonZero()
         {
             //Arrange
-            SolveDay00 puzzle = new(basePathPuzzle);
+            SolveDay03 puzzle = new(basePathPuzzle);
 
             //Act
-            int partA = puzzle.PartA;
+            int partA = puzzle.PrioritySumA;
             output.WriteLine(partA.ToString());
 
             //Assert
@@ -62,10 +62,10 @@ namespace AdventofCode2022Tests
         public void TestCaseBNonZero()
         {
             //Arrange
-            SolveDay00 puzzle = new(basePathPuzzle);
+            SolveDay03 puzzle = new(basePathPuzzle);
 
             //Act
-            int partB = puzzle.PartB;
+            int partB = puzzle.PriortySumB;
             output.WriteLine(partB.ToString());
 
             //Assert

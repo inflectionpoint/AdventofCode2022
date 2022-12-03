@@ -11,7 +11,7 @@ namespace AdventofCode2022Tests
         public TestDay02(ITestOutputHelper output)
         {
             this.output = output;
-            string day = GetType().Name.Substring(7);
+            string day = GetType().Name[7..];
             basePathPuzzle = Common.BasePath + $"Input{day}.txt";
             basePathSample = Common.BasePath + $"Sample{day}.txt";
         }
@@ -23,7 +23,7 @@ namespace AdventofCode2022Tests
             SolveDay02 puzzle = new(basePathSample);
 
             //Act
-            int partA = puzzle.PartA;
+            int partA = puzzle.TotalScoreA;
             output.WriteLine(partA.ToString());
 
             //Assert
@@ -37,7 +37,7 @@ namespace AdventofCode2022Tests
             SolveDay02 puzzle = new(basePathSample);
 
             //Act
-            int partB = puzzle.PartB;
+            int partB = puzzle.TotalScoreB;
             output.WriteLine(partB.ToString());
 
             //Assert
@@ -51,7 +51,7 @@ namespace AdventofCode2022Tests
             SolveDay02 puzzle = new(basePathPuzzle);
 
             //Act
-            int partA = puzzle.PartA;
+            int partA = puzzle.TotalScoreA;
             output.WriteLine(partA.ToString());
 
             //Assert
@@ -65,7 +65,7 @@ namespace AdventofCode2022Tests
             SolveDay02 puzzle = new(basePathPuzzle);
 
             //Act
-            int partB = puzzle.PartB;
+            int partB = puzzle.TotalScoreB;
             output.WriteLine(partB.ToString());
 
             //Assert

@@ -7,19 +7,19 @@
         /// <summary>
         /// File path for the data source
         /// </summary>
-        private string InputFile;
+        private readonly string InputFile;
 
-        public List<(string A, string B)> GameResults { get; private set; } = new();
+        public List<(string A, string B)> GameEncryption { get; private set; } = new();
 
         /// <summary>
         /// The Answer to Part A
         /// </summary>
-        public int PartA => ComputePartA();
+        public int TotalScoreA => ComputeTotalScoreA();
 
         /// <summary>
         /// The Answer to Part B
         /// </summary>
-        public int PartB => ComputePartB();
+        public int TotalScoreB => ComputeTotalScoreB();
 
 
         //CONSTRUCTOR
@@ -41,7 +41,7 @@
             foreach (string line in File.ReadLines(InputFile))
             {
                 string[] parts = line.Split(' ');
-                GameResults.Add((parts[0], parts[1]));
+                GameEncryption.Add((parts[0], parts[1]));
             }
         }
 
@@ -114,11 +114,11 @@
         /// Logic to Solve Question 1:
         /// What would your total score be if everything goes exactly according to your strategy guide?
         /// </summary>
-        private int ComputePartA()
+        private int ComputeTotalScoreA()
         {
             int scoreTotal = 0;
 
-            foreach (var (playerA, playerB) in GameResults)
+            foreach (var (playerA, playerB) in GameEncryption)
             {
                 scoreTotal += ComputeScore(playerA, playerB);
             }
@@ -130,11 +130,11 @@
         /// Logic to Solve Question 2:
         /// What would your total score be if everything goes exactly according to your strategy guide?
         /// </summary>
-        private int ComputePartB()
+        private int ComputeTotalScoreB()
         {
             int scoreTotal = 0;
 
-            foreach (var (opponent, result) in GameResults)
+            foreach (var (opponent, result) in GameEncryption)
             {
                 string mine = ComputeThrow(opponent + result);
 

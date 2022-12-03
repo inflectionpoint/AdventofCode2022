@@ -11,7 +11,7 @@ namespace AdventofCode2022Tests
         public TestDay01(ITestOutputHelper output)
         {
             this.output = output;
-            string day = GetType().Name.Substring(7);
+            string day = GetType().Name[7..];
             basePathPuzzle = Common.BasePath + $"Input{day}.txt";
             basePathSample = Common.BasePath + $"Sample{day}.txt";
         }
