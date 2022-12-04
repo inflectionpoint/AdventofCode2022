@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="SolveDay00.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="SolveDay00.cs" />
+  </ItemGroup>
+
 </Project>

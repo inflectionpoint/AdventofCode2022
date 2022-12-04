@@ -1,6 +1,6 @@
 ﻿namespace AdventofCode2022
 {
-    public class SolveDay00
+    public class SolveDay04
     {
         //PROPERTIES
 
@@ -21,7 +21,7 @@
 
 
         //CONSTRUCTOR
-        public SolveDay00(string dataFilePath)
+        public SolveDay04(string dataFilePath)
         {
             InputFile = dataFilePath;
             ManipulateData();

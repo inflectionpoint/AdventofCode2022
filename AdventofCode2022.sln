@@ -5,13 +5,6 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventofCode2022", "AdventofCode2022\AdventofCode2022.csproj", "{C5273C84-1419-469E-A8B0-B5FA46DE40BE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prompts", "Prompts", "{FE637874-A6B5-45E3-9F7B-A5E95FB37629}"
-	ProjectSection(SolutionItems) = preProject
-		Puzzle01.txt = Puzzle01.txt
-		Puzzle02.txt = Puzzle02.txt
-		Puzzle03.txt = Puzzle03.txt
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventofCode2022Tests", "AdventofCode2022Tests\AdventofCode2022Tests.csproj", "{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Puzzle Input", "Puzzle Input", "{D0512A28-78D2-44B9-839C-02479307725B}"
@@ -19,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Puzzle Input", "Puzzle Inpu
 		Input01.txt = Input01.txt
 		Input02.txt = Input02.txt
 		Input03.txt = Input03.txt
+		Input04.txt = Input04.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Input", "Sample Input", "{7DA243B2-DD15-450F-A9F2-18DA9ABDE516}"
@@ -26,6 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Input", "Sample Inpu
 		Sample01.txt = Sample01.txt
 		Sample02.txt = Sample02.txt
 		Sample03.txt = Sample03.txt
+		Sample04.txt = Sample04.txt
 	EndProjectSection
 EndProject
 Global
