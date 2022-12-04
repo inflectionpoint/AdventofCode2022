@@ -12,8 +12,8 @@ namespace AdventofCode2022Tests
         {
             this.output = output;
             string day = GetType().Name[7..];
-            basePathPuzzle = Common.BasePath + $"Input{day}.txt";
-            basePathSample = Common.BasePath + $"Sample{day}.txt";
+            basePathPuzzle = Common.BasePath + $"Data - Puzzle\\Puzzle{day}.txt";
+            basePathSample = Common.BasePath + $"Data - Sample\\Sample{day}.txt";
         }
 
         [Fact]

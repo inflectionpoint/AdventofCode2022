@@ -90,17 +90,17 @@
         {
             int prioritySum = 0;
 
-            for (int i = 0; i < Rucksacks.Count; i+=3)
+            for (int i = 0; i < Rucksacks.Count; i += 3)
             {
-                char[] A = Rucksacks[i+0].ToCharArray();
-                char[] B = Rucksacks[i+1].ToCharArray();
-                char[] C = Rucksacks[i+2].ToCharArray();
+                char[] A = Rucksacks[i + 0].ToCharArray();
+                char[] B = Rucksacks[i + 1].ToCharArray();
+                char[] C = Rucksacks[i + 2].ToCharArray();
 
                 int badge = A.Intersect(B).Intersect(C).ToArray()[0];
 
                 prioritySum += GetPriortyValue(badge);
             }
-            
+
             return prioritySum;
         }
     }

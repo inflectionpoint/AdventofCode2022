@@ -8,7 +8,7 @@
         /// File path for the data source
         /// </summary>
         private readonly string InputFile;
-        
+
         /// <summary>
         /// A list elves with total calorie count for each elf
         /// </summary>
@@ -17,8 +17,8 @@
         /// <summary>
         /// The Answer to Part A
         /// </summary>
-        public int MaxCalories => FindMaxCalories(); 
-        
+        public int MaxCalories => FindMaxCalories();
+
         /// <summary>
         /// The Answer to Part B
         /// </summary>

@@ -9,19 +9,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventofCode2022Tests", "Ad
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Puzzle Input", "Puzzle Input", "{D0512A28-78D2-44B9-839C-02479307725B}"
 	ProjectSection(SolutionItems) = preProject
-		Input01.txt = Input01.txt
-		Input02.txt = Input02.txt
-		Input03.txt = Input03.txt
-		Input04.txt = Input04.txt
+		Input\Data - Puzzle\Puzzle01.txt = Input\Data - Puzzle\Puzzle01.txt
+		Input\Data - Puzzle\Puzzle02.txt = Input\Data - Puzzle\Puzzle02.txt
+		Input\Data - Puzzle\Puzzle04.txt = Input\Data - Puzzle\Puzzle04.txt
+		Input\Data - Puzzle\Puzzle03.txt = Input\Data - Puzzle\Puzzle03.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Input", "Sample Input", "{7DA243B2-DD15-450F-A9F2-18DA9ABDE516}"
 	ProjectSection(SolutionItems) = preProject
-		Sample01.txt = Sample01.txt
-		Sample02.txt = Sample02.txt
-		Sample03.txt = Sample03.txt
-		Sample04.txt = Sample04.txt
+		Input\Data - Sample\Sample01.txt = Input\Data - Sample\Sample01.txt
+		Input\Data - Sample\Sample02.txt = Input\Data - Sample\Sample02.txt
+		Input\Data - Sample\Sample03.txt = Input\Data - Sample\Sample03.txt
+		Input\Data - Sample\Sample04.txt = Input\Data - Sample\Sample04.txt
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A4A5751F-04CD-4205-8278-0B53B995971B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{96483426-7809-4598-B03C-B4F666317071}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +44,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D0512A28-78D2-44B9-839C-02479307725B} = {96483426-7809-4598-B03C-B4F666317071}
+		{7DA243B2-DD15-450F-A9F2-18DA9ABDE516} = {96483426-7809-4598-B03C-B4F666317071}
+		{96483426-7809-4598-B03C-B4F666317071} = {A4A5751F-04CD-4205-8278-0B53B995971B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D20C6A7-7F67-4719-B469-113B5CA6AFD7}

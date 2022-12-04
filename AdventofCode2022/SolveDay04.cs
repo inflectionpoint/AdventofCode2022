@@ -28,7 +28,7 @@
             InputFile = dataFilePath;
             ManipulateData();
         }
-        
+
 
         //METHODS
 
@@ -53,7 +53,7 @@
                 };
 
                 Assigments.Add(groups);
-                
+
             }
         }
 
@@ -68,7 +68,7 @@
             foreach (List<int> assigment in Assigments)
             {
                 if ((assigment[0] <= assigment[2] &&
-                    assigment[1] >= assigment[3]) || 
+                    assigment[1] >= assigment[3]) ||
                     (assigment[0] >= assigment[2] &&
                     assigment[1] <= assigment[3]))
                 {
@@ -97,7 +97,7 @@
                 {
                     duplicates++;
                 }
-                
+
                 //Matching Boundry 
                 else if (assigment[0] == assigment[2] || assigment[0] == assigment[3])
                 {

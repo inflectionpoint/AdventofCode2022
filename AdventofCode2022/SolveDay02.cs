@@ -28,7 +28,7 @@
             InputFile = dataFilePath;
             ManipulateData();
         }
-        
+
 
         //METHODS
 
@@ -62,11 +62,11 @@
             };
 
             score += ComputeOutcomeScore(playerA + playerB);
-            
+
             return score;
 
         }
-        
+
         /// <summary>
         /// Determines the score value based on the match outcome.
         /// </summary>
@@ -94,7 +94,7 @@
                 "AZ" => "Y",
                 "BZ" => "Z",
                 "CZ" => "X",
-                
+
                 //Draw Required: (Y)
                 "AY" => "X",
                 "BY" => "Y",
