@@ -17,7 +17,7 @@ namespace AdventofCode2022Tests
         }
 
         [Fact]
-        public void TestCaseA()
+        public void CheckIfTotalScoreSimpleEquals()
         {
             //Arrange
             SolveDay02 puzzle = new(basePathSample);
@@ -31,7 +31,7 @@ namespace AdventofCode2022Tests
         }
 
         [Fact]
-        public void TestCaseB()
+        public void CheckIfTotalScoreComplexEquals()
         {
             //Arrange
             SolveDay02 puzzle = new(basePathSample);
@@ -45,7 +45,7 @@ namespace AdventofCode2022Tests
         }
 
         [Fact]
-        public void TestCaseANonZero()
+        public void ComputesNonZeroTotalScoreSimple()
         {
             //Arrange
             SolveDay02 puzzle = new(basePathPuzzle);
@@ -59,7 +59,7 @@ namespace AdventofCode2022Tests
         }
 
         [Fact]
-        public void TestCaseBNonZero()
+        public void ComputesNonZeroTotalScoreComplex()
         {
             //Arrange
             SolveDay02 puzzle = new(basePathPuzzle);

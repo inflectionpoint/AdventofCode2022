@@ -9,7 +9,7 @@
         /// </summary>
         private readonly string InputFile;
 
-        private List<List<int>> Assigments = new();
+        private readonly List<int[]> Assigments = new();
 
         /// <summary>
         /// The Answer to Part A
@@ -40,19 +40,12 @@
         {
             foreach (string line in File.ReadLines(InputFile))
             {
-                var a = line.Split(",");
-                var b = a[0].Split("-");
-                var c = a[1].Split("-");
+                var a = line.Split(new char[] { ',', '-'});
+                
+                int i = 0;
+                int[] vals = a.Where(x => int.TryParse(x, out i)).Select(x => i).ToArray();
 
-                List<int> groups = new()
-                {
-                    int.Parse(b[0]),
-                    int.Parse(b[1]),
-                    int.Parse(c[0]),
-                    int.Parse(c[1])
-                };
-
-                Assigments.Add(groups);
+                Assigments.Add(vals);
 
             }
         }
@@ -65,14 +58,12 @@
         {
             int duplicates = 0;
 
-            foreach (List<int> assigment in Assigments)
+            foreach (var ints in Assigments)
             {
-                if ((assigment[0] <= assigment[2] &&
-                    assigment[1] >= assigment[3]) ||
-                    (assigment[0] >= assigment[2] &&
-                    assigment[1] <= assigment[3]))
+                if ((ints[0] <= ints[2] && ints[1] >= ints[3]) ||
+                    (ints[0] >= ints[2] && ints[1] <= ints[3]))
                 {
-                    duplicates++;
+                    duplicates += 1;
                 }
             }
 
@@ -87,45 +78,12 @@
         {
             int duplicates = 0;
 
-            foreach (List<int> assigment in Assigments)
+            foreach (var ints in Assigments)
             {
-                //Full Overlap
-                if ((assigment[0] <= assigment[2] &&
-                    assigment[1] >= assigment[3]) ||
-                    (assigment[0] >= assigment[2] &&
-                    assigment[1] <= assigment[3]))
+                if (!(ints[1] < ints[2] || ints[3] < ints[0]))
                 {
-                    duplicates++;
+                    duplicates += 1;
                 }
-
-                //Matching Boundry 
-                else if (assigment[0] == assigment[2] || assigment[0] == assigment[3])
-                {
-                    duplicates++;
-                }
-                //Matching Boundry
-                else if (assigment[1] == assigment[2] || assigment[1] == assigment[3])
-                {
-                    duplicates++;
-                }
-                //Partial Overlap
-                else if (assigment[0] >= assigment[2] && assigment[0] <= assigment[3])
-                {
-                    duplicates++;
-                }
-                else if (assigment[1] >= assigment[2] && assigment[1] <= assigment[3])
-                {
-                    duplicates++;
-                }
-                else if (assigment[2] >= assigment[0] && assigment[2] <= assigment[1])
-                {
-                    duplicates++;
-                }
-                else if (assigment[3] >= assigment[0] && assigment[3] <= assigment[1])
-                {
-                    duplicates++;
-                }
-
             }
 
             return duplicates;
