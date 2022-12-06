@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace AdventofCode2022
+namespace AoCwithCSharp
 {
     public class SolveDay05
     {
@@ -13,9 +13,9 @@ namespace AdventofCode2022
         /// </summary>
         private readonly string InputFile;
 
-        private List<Stack<char>> Ship = new();
-        private List<char[]> chars = new();
-        private List<(int, int, int)> Actions = new();
+        private readonly List<Stack<char>> Ship = new();
+        private readonly List<char[]> chars = new();
+        private readonly List<(int, int, int)> Actions = new();
 
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace AdventofCode2022
             InputFile = dataFilePath;
             ManipulateData();
         }
-        
+
 
         //METHODS
 
@@ -58,19 +58,13 @@ namespace AdventofCode2022
                 else
                 {
                     chars.Add(line.ToCharArray());
-                    
-                    //int index = 0;
-                    //foreach (char container in line.ToCharArray())
-                    //{
-
-                    //}
                 }
             }
 
             chars.Reverse();
-            chars.RemoveRange(0,2);
+            chars.RemoveRange(0, 2);
 
-            for (int i = 0; i < (chars[0].Length + 1)/4; i++)
+            for (int i = 0; i < (chars[0].Length + 1) / 4; i++)
             {
                 Ship.Add(new Stack<char>());
             }
@@ -147,7 +141,7 @@ namespace AdventofCode2022
                     Ship[dest - 1].Push(temp.Pop());
                 }
             }
-            
+
             return GetTopRow();
         }
     }

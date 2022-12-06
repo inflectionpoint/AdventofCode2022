@@ -1,4 +1,4 @@
-﻿namespace AdventofCode2022
+﻿namespace AoCwithCSharp
 {
     public class SolveDay02
     {

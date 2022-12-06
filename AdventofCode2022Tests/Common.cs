@@ -1,4 +1,4 @@
-﻿namespace AdventofCode2022Tests
+﻿namespace AoCwithCSharpTests
 {
     public class Common
     {

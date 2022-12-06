@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventofCode2022", "AdventofCode2022\AdventofCode2022.csproj", "{C5273C84-1419-469E-A8B0-B5FA46DE40BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AoCwithCSharp", "AdventofCode2022\AoCwithCSharp.csproj", "{C5273C84-1419-469E-A8B0-B5FA46DE40BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventofCode2022Tests", "AdventofCode2022Tests\AdventofCode2022Tests.csproj", "{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AoCwithCSharpTests", "AdventofCode2022Tests\AoCwithCSharpTests.csproj", "{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Puzzle Input", "Puzzle Input", "{D0512A28-78D2-44B9-839C-02479307725B}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,7 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Puzzle Input", "Puzzle Inpu
 		Input\Data - Puzzle\Puzzle02.txt = Input\Data - Puzzle\Puzzle02.txt
 		Input\Data - Puzzle\Puzzle03.txt = Input\Data - Puzzle\Puzzle03.txt
 		Input\Data - Puzzle\Puzzle04.txt = Input\Data - Puzzle\Puzzle04.txt
-		Puzzle05.txt = Puzzle05.txt
+		Input\Data - Puzzle\Puzzle05.txt = Input\Data - Puzzle\Puzzle05.txt
+		Input\Data - Puzzle\Puzzle06.txt = Input\Data - Puzzle\Puzzle06.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Input", "Sample Input", "{7DA243B2-DD15-450F-A9F2-18DA9ABDE516}"
@@ -22,27 +23,84 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Input", "Sample Inpu
 		Input\Data - Sample\Sample02.txt = Input\Data - Sample\Sample02.txt
 		Input\Data - Sample\Sample03.txt = Input\Data - Sample\Sample03.txt
 		Input\Data - Sample\Sample04.txt = Input\Data - Sample\Sample04.txt
-		Sample05.txt = Sample05.txt
+		Input\Data - Sample\Sample05.txt = Input\Data - Sample\Sample05.txt
+		Input\Data - Sample\Sample06.txt = Input\Data - Sample\Sample06.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A4A5751F-04CD-4205-8278-0B53B995971B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{96483426-7809-4598-B03C-B4F666317071}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AoCwithCPP", "AoCwithCPP\AoCwithCPP.vcxproj", "{7E283726-AE5B-4154-B81D-EB03291B0AB7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AoCwithCPPTests", "AoCwithCPPTests\AoCwithCPPTests.vcxproj", "{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "AoCwithPython", "AoCwithPython\AoCwithPython.pyproj", "{D764E2E4-5A81-4A9C-A0FC-28D8B0AD94FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C5273C84-1419-469E-A8B0-B5FA46DE40BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C5273C84-1419-469E-A8B0-B5FA46DE40BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5273C84-1419-469E-A8B0-B5FA46DE40BE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C5273C84-1419-469E-A8B0-B5FA46DE40BE}.Debug|x64.Build.0 = Debug|Any CPU
+		{C5273C84-1419-469E-A8B0-B5FA46DE40BE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C5273C84-1419-469E-A8B0-B5FA46DE40BE}.Debug|x86.Build.0 = Debug|Any CPU
 		{C5273C84-1419-469E-A8B0-B5FA46DE40BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5273C84-1419-469E-A8B0-B5FA46DE40BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5273C84-1419-469E-A8B0-B5FA46DE40BE}.Release|x64.ActiveCfg = Release|Any CPU
+		{C5273C84-1419-469E-A8B0-B5FA46DE40BE}.Release|x64.Build.0 = Release|Any CPU
+		{C5273C84-1419-469E-A8B0-B5FA46DE40BE}.Release|x86.ActiveCfg = Release|Any CPU
+		{C5273C84-1419-469E-A8B0-B5FA46DE40BE}.Release|x86.Build.0 = Release|Any CPU
 		{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}.Debug|x64.Build.0 = Debug|Any CPU
+		{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}.Debug|x86.Build.0 = Debug|Any CPU
 		{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}.Release|x64.ActiveCfg = Release|Any CPU
+		{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}.Release|x64.Build.0 = Release|Any CPU
+		{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}.Release|x86.ActiveCfg = Release|Any CPU
+		{71044F1E-CE9C-4AFF-A8C8-18817C93FB72}.Release|x86.Build.0 = Release|Any CPU
+		{7E283726-AE5B-4154-B81D-EB03291B0AB7}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{7E283726-AE5B-4154-B81D-EB03291B0AB7}.Debug|Any CPU.Build.0 = Debug|x64
+		{7E283726-AE5B-4154-B81D-EB03291B0AB7}.Debug|x64.ActiveCfg = Debug|x64
+		{7E283726-AE5B-4154-B81D-EB03291B0AB7}.Debug|x64.Build.0 = Debug|x64
+		{7E283726-AE5B-4154-B81D-EB03291B0AB7}.Debug|x86.ActiveCfg = Debug|Win32
+		{7E283726-AE5B-4154-B81D-EB03291B0AB7}.Debug|x86.Build.0 = Debug|Win32
+		{7E283726-AE5B-4154-B81D-EB03291B0AB7}.Release|Any CPU.ActiveCfg = Release|x64
+		{7E283726-AE5B-4154-B81D-EB03291B0AB7}.Release|Any CPU.Build.0 = Release|x64
+		{7E283726-AE5B-4154-B81D-EB03291B0AB7}.Release|x64.ActiveCfg = Release|x64
+		{7E283726-AE5B-4154-B81D-EB03291B0AB7}.Release|x64.Build.0 = Release|x64
+		{7E283726-AE5B-4154-B81D-EB03291B0AB7}.Release|x86.ActiveCfg = Release|Win32
+		{7E283726-AE5B-4154-B81D-EB03291B0AB7}.Release|x86.Build.0 = Release|Win32
+		{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}.Debug|Any CPU.Build.0 = Debug|x64
+		{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}.Debug|x64.ActiveCfg = Debug|x64
+		{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}.Debug|x64.Build.0 = Debug|x64
+		{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}.Debug|x86.ActiveCfg = Debug|Win32
+		{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}.Debug|x86.Build.0 = Debug|Win32
+		{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}.Release|Any CPU.ActiveCfg = Release|x64
+		{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}.Release|Any CPU.Build.0 = Release|x64
+		{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}.Release|x64.ActiveCfg = Release|x64
+		{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}.Release|x64.Build.0 = Release|x64
+		{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}.Release|x86.ActiveCfg = Release|Win32
+		{26D7BF41-3484-4B6C-A166-8E617BE3CEE9}.Release|x86.Build.0 = Release|Win32
+		{D764E2E4-5A81-4A9C-A0FC-28D8B0AD94FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D764E2E4-5A81-4A9C-A0FC-28D8B0AD94FF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D764E2E4-5A81-4A9C-A0FC-28D8B0AD94FF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D764E2E4-5A81-4A9C-A0FC-28D8B0AD94FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D764E2E4-5A81-4A9C-A0FC-28D8B0AD94FF}.Release|x64.ActiveCfg = Release|Any CPU
+		{D764E2E4-5A81-4A9C-A0FC-28D8B0AD94FF}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

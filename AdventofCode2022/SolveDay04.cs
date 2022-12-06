@@ -1,4 +1,4 @@
-﻿namespace AdventofCode2022
+﻿namespace AoCwithCSharp
 {
     public class SolveDay00
     {
@@ -40,8 +40,8 @@
         {
             foreach (string line in File.ReadLines(InputFile))
             {
-                var a = line.Split(new char[] { ',', '-'});
-                
+                var a = line.Split(new char[] { ',', '-' });
+
                 int i = 0;
                 int[] vals = a.Where(x => int.TryParse(x, out i)).Select(x => i).ToArray();
 
@@ -60,8 +60,8 @@
 
             foreach (var ints in Assigments)
             {
-                if ((ints[0] <= ints[2] && ints[1] >= ints[3]) ||
-                    (ints[0] >= ints[2] && ints[1] <= ints[3]))
+                if (ints[0] <= ints[2] && ints[1] >= ints[3] ||
+                    ints[0] >= ints[2] && ints[1] <= ints[3])
                 {
                     duplicates += 1;
                 }

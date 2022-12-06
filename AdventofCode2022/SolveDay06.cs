@@ -1,6 +1,6 @@
 ﻿namespace AoCwithCSharp
 {
-    public class SolveDay00
+    public class SolveDay06
     {
         //PROPERTIES
 
@@ -8,6 +8,8 @@
         /// File path for the data source
         /// </summary>
         private readonly string InputFile;
+
+        private string datastream;
 
         /// <summary>
         /// The Answer to Part A
@@ -21,7 +23,7 @@
 
 
         //CONSTRUCTOR
-        public SolveDay00(string dataFilePath)
+        public SolveDay06(string dataFilePath)
         {
             InputFile = dataFilePath;
             ManipulateData();
@@ -36,19 +38,44 @@
         /// </summary>
         private void ManipulateData()
         {
-            foreach (string line in File.ReadLines(InputFile))
-            {
-                Console.WriteLine(line);
-            }
+            datastream = File.ReadAllText(InputFile);
+
         }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="size"></param>
+        /// <returns></returns>
+        private int ComputeStream(int size)
+        {
+            string data = datastream[..size];
+
+            for (int i = size; i < datastream.Length; i++)
+            {
+                if (data.Distinct().Count() == size)
+                {
+                    return i;
+                }
+                else
+                {
+                    data = data[1..];
+                    data += datastream[i];
+                }
+            }
+
+            return -1;
+        }
+
 
         /// <summary>
         /// Logic to Solve Question 1:
-        /// 
+        /// How many characters need to be processed before the first start-of-packet marker is detected?
         /// </summary>
         private int ComputePartA()
         {
-            throw new NotImplementedException();
+            return ComputeStream(4);
         }
 
         /// <summary>
@@ -57,7 +84,7 @@
         /// </summary>
         private int ComputePartB()
         {
-            throw new NotImplementedException();
+            return ComputeStream(14);
         }
     }
 }

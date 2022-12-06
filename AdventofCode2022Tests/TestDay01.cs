@@ -1,6 +1,6 @@
-using AdventofCode2022;
+using AoCwithCSharp;
 
-namespace AdventofCode2022Tests
+namespace AoCwithCSharpTests
 {
     public class TestDay01
     {

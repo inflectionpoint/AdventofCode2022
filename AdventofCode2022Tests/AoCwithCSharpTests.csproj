@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AdventofCode2022\AdventofCode2022.csproj" />
+    <ProjectReference Include="..\AdventofCode2022\AoCwithCSharp.csproj" />
   </ItemGroup>
 
 </Project>
