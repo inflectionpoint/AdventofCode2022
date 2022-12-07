@@ -7,9 +7,9 @@
         /// <summary>
         /// File path for the data source
         /// </summary>
-        private readonly string InputFile;
+        private readonly string InputFile = "";
 
-        private string datastream;
+        private string DataStream = "";
 
         /// <summary>
         /// The Answer to Part A
@@ -23,12 +23,21 @@
 
 
         //CONSTRUCTOR
-        public SolveDay06(string dataFilePath)
+
+        public SolveDay06(string data, bool isPath)
         {
-            InputFile = dataFilePath;
-            ManipulateData();
+            if (isPath)
+            {
+                InputFile = data;
+                ManipulateData();
+            }
+            else
+            {
+                DataStream = data;
+            }
+
         }
-        
+
 
         //METHODS
 
@@ -38,7 +47,7 @@
         /// </summary>
         private void ManipulateData()
         {
-            datastream = File.ReadAllText(InputFile);
+            DataStream = File.ReadAllText(InputFile);
 
         }
 
@@ -50,9 +59,9 @@
         /// <returns></returns>
         private int ComputeStream(int size)
         {
-            string data = datastream[..size];
+            string data = DataStream[..size];
 
-            for (int i = size; i < datastream.Length; i++)
+            for (int i = size; i < DataStream.Length; i++)
             {
                 if (data.Distinct().Count() == size)
                 {
@@ -61,7 +70,7 @@
                 else
                 {
                     data = data[1..];
-                    data += datastream[i];
+                    data += DataStream[i];
                 }
             }
 

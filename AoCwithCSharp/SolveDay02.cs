@@ -14,12 +14,12 @@
         /// <summary>
         /// The Answer to Part A
         /// </summary>
-        public int TotalScoreA => ComputeTotalScoreA();
+        public int PartA => ComputeTotalScoreA();
 
         /// <summary>
         /// The Answer to Part B
         /// </summary>
-        public int TotalScoreB => ComputeTotalScoreB();
+        public int PartB => ComputeTotalScoreB();
 
 
         //CONSTRUCTOR

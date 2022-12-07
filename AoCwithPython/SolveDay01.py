@@ -1,7 +1,4 @@
-from audioop import reverse
 from pathlib import Path
-
-
 
 def ManipulateData(path):
     txt = Path(path).read_text().splitlines()
@@ -19,12 +16,12 @@ def ManipulateData(path):
     
     return calories
 
-def ComputeMaxCalories(path):
+def SolvePartA(path):
     return max(ManipulateData(path))
 
-
-def ComputeTopThreeCalories(path):
+def SolvePartB(path):
     cals = ManipulateData(path)
     cals.sort(reverse=True)
     return sum(cals[0:3])
+
     

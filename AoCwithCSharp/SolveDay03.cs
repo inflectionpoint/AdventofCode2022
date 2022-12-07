@@ -14,12 +14,12 @@
         /// <summary>
         /// The Answer to Part A
         /// </summary>
-        public int PrioritySumA => ComputePriortySumA();
+        public int PartA => ComputePriortySumA();
 
         /// <summary>
         /// The Answer to Part B
         /// </summary>
-        public int PriortySumB => ComputePriortySumB();
+        public int PartB => ComputePriortySumB();
 
 
         //CONSTRUCTOR

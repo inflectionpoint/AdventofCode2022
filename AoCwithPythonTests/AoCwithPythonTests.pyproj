@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>d764e2e4-5a81-4a9c-a0fc-28d8b0ad94ff</ProjectGuid>
+    <ProjectGuid>8efe0b4a-3d64-4c2c-877f-5a8f5139beef</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>
     </StartupFile>
@@ -10,9 +10,9 @@
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>AoCwithPython</Name>
-    <RootNamespace>AoCwithPython</RootNamespace>
-    <TestFramework>none</TestFramework>
+    <Name>AoCwithPythonTests</Name>
+    <RootNamespace>AoCwithPythonTests</RootNamespace>
+    <TestFramework>unittest</TestFramework>
     <UnitTestPattern>Test*.py</UnitTestPattern>
     <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
@@ -25,9 +25,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="SolveDay00.py" />
-    <Compile Include="SolveDay01.py" />
-    <Content Include="SolveDay02.py" />
+    <Compile Include="TestDay01.py" />
+    <Content Include="TestDay00.py" />
+    <Compile Include="TestDay02.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AoCwithPython\AoCwithPython.pyproj">
+      <Name>AoCwithPython</Name>
+      <Project>{d764e2e4-5a81-4a9c-a0fc-28d8b0ad94ff}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

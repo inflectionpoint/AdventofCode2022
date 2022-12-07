@@ -17,12 +17,12 @@
         /// <summary>
         /// The Answer to Part A
         /// </summary>
-        public int MaxCalories => FindMaxCalories();
+        public int PartA => FindMaxCalories();
 
         /// <summary>
         /// The Answer to Part B
         /// </summary>
-        public int TopThreeCalories => FindTopThreeCalories();
+        public int PartB => FindTopThreeCalories();
 
 
         //CONSTRUCTOR
