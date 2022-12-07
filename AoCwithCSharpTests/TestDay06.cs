@@ -1,5 +1,4 @@
 ﻿using AoCwithCSharp;
-using System.IO;
 
 namespace AoCwithCSharpTests
 {

@@ -1,6 +1,6 @@
 ﻿namespace AoCwithCSharp
 {
-    public class SolveDay06
+    public class SolveDay06 : SolverInt
     {
         //PROPERTIES
 
@@ -14,12 +14,12 @@
         /// <summary>
         /// The Answer to Part A
         /// </summary>
-        public int PartA => ComputePartA();
+        override public int PartA => ComputePartA();
 
         /// <summary>
         /// The Answer to Part B
         /// </summary>
-        public int PartB => ComputePartB();
+        override public int PartB => ComputePartB();
 
 
         //CONSTRUCTOR
@@ -53,7 +53,7 @@
 
 
         /// <summary>
-        /// 
+        /// How many characters need to be processed before the first start-of-packet marker is detected?
         /// </summary>
         /// <param name="size"></param>
         /// <returns></returns>
@@ -80,7 +80,7 @@
 
         /// <summary>
         /// Logic to Solve Question 1:
-        /// How many characters need to be processed before the first start-of-packet marker is detected?
+        /// Packet Size 4
         /// </summary>
         private int ComputePartA()
         {
@@ -89,7 +89,7 @@
 
         /// <summary>
         /// Logic to Solve Question 2:
-        /// 
+        /// Packet Size 14
         /// </summary>
         private int ComputePartB()
         {

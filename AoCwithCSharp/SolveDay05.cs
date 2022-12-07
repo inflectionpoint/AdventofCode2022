@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace AoCwithCSharp
 {
-    public class SolveDay05
+    public class SolveDay05 : SolverStr
     {
         //PROPERTIES
 
@@ -21,12 +21,12 @@ namespace AoCwithCSharp
         /// <summary>
         /// The Answer to Part A
         /// </summary>
-        public string PartA => ComputePartA();
+        override public string PartA => ComputePartA();
 
         /// <summary>
         /// The Answer to Part B
         /// </summary>
-        public string PartB => ComputePartB();
+        override public string PartB => ComputePartB();
 
 
         //CONSTRUCTOR
@@ -90,16 +90,16 @@ namespace AoCwithCSharp
         /// Common function to return the top container in each stack.
         /// </summary>
         /// <returns></returns>
-        private string GetTopRow()
+        private string GetTopContainers()
         {
-            string ans = "";
+            string topContainers = "";
 
             foreach (Stack<char> containerStack in Ship)
             {
-                ans += containerStack.Peek().ToString();
+                topContainers += containerStack.Peek().ToString();
             }
 
-            return ans;
+            return topContainers;
         }
 
 
@@ -109,15 +109,15 @@ namespace AoCwithCSharp
         /// </summary>
         private string ComputePartA()
         {
-            foreach ((int Count, int from, int dest) in Actions)
+            foreach ((int count, int from, int dest) in Actions)
             {
-                for (int i = 0; i < Count; i++)
+                for (int i = 0; i < count; i++)
                 {
                     Ship[dest - 1].Push(Ship[from - 1].Pop());
                 }
             }
 
-            return GetTopRow();
+            return GetTopContainers();
         }
 
         /// <summary>
@@ -128,21 +128,21 @@ namespace AoCwithCSharp
         {
             Stack<char> temp = new();
 
-            foreach ((int Count, int from, int dest) in Actions)
+            foreach ((int count, int from, int dest) in Actions)
             {
 
-                for (int i = 0; i < Count; i++)
+                for (int i = 0; i < count; i++)
                 {
                     temp.Push(Ship[from - 1].Pop());
                 }
 
-                for (int i = 0; i < Count; i++)
+                for (int i = 0; i < count; i++)
                 {
                     Ship[dest - 1].Push(temp.Pop());
                 }
             }
 
-            return GetTopRow();
+            return GetTopContainers();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace AoCwithCSharp
 {
-    public class SolveDay03
+    public class SolveDay03 : SolverInt
     {
         //PROPERTIES
 
@@ -14,12 +14,12 @@
         /// <summary>
         /// The Answer to Part A
         /// </summary>
-        public int PartA => ComputePriortySumA();
+        override public int PartA => ComputePriortySumA();
 
         /// <summary>
         /// The Answer to Part B
         /// </summary>
-        public int PartB => ComputePriortySumB();
+        override public int PartB => ComputePriortySumB();
 
 
         //CONSTRUCTOR
