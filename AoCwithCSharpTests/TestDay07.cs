@@ -15,7 +15,7 @@ namespace AoCwithCSharpTests
 
         [Theory]
         [InlineData("Sample", 95437)]
-        [InlineData("Puzzle", 0)]
+        [InlineData("Puzzle", 1743217)]
         public void TestPartA(string type, int expect)
         {
             //Arrange
@@ -27,13 +27,11 @@ namespace AoCwithCSharpTests
 
             //Assert
             Assert.Equal(expect, result);
-            //Guess 1: 1488737 (too Low..)
-
         }
 
         [Theory]
         [InlineData("Sample", 24933642)]
-        [InlineData("Puzzle", 0)]
+        [InlineData("Puzzle", 8319096)]
         public void TestPartB(string type, int expect)
         {
             //Arrange

@@ -1,12 +1,4 @@
-﻿using AoCwithCSharp;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Xml.Linq;
-
-namespace AoCwithCSharp
+﻿namespace AoCwithCSharp
 {
     public class SolveDay07 : SolverInt
     {
@@ -64,17 +56,13 @@ namespace AoCwithCSharp
                     //Move down a level
                     else
                     {
+                        //Append to the path a directory level.
                         string dirPath = $"{currentPath}{x[1]}";
-
-                        if (x[1] != "/")
-                        {
-                            dirPath += "/";
-                        }
 
                         //Create new Empty Node with Path.
                         Nodes.Add(dirPath, new Node { Parent = currentPath, Size = 0, Type = "dir" });
 
-                        //Append to the path a level.
+                        //Reset Current Path
                         currentPath = dirPath;
                     }
                 }
@@ -86,13 +74,16 @@ namespace AoCwithCSharp
                         //Get the file size
                         int size = int.Parse(x[0]);
 
+                        //Append filename to current Path
                         string filePath = $"{currentPath}{x[1]}";
 
+                        //Added Files to Structure, Not Required for Problem Set.
                         Nodes.Add(filePath, new Node { Parent = currentPath, Size = size , Type = "file"});
 
-                        //Update the parent directory sizes
+                        //Set the parent Path for the Loop
                         string parentPath = Nodes[filePath].Parent;
 
+                        //Update the parent directory sizes
                         while (parentPath != "")
                         {
                             Nodes[parentPath].Size += size;
