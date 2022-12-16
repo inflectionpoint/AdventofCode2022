@@ -1,6 +1,10 @@
-﻿namespace AoCwithCSharp
+﻿using Microsoft.Win32;
+using System.Collections;
+using System.Formats.Asn1;
+
+namespace AoCwithCSharp
 {
-    public class SolveDay10 : SolverInt
+    public class SolveDay10 
     {
         enum Actions
         {
@@ -15,18 +19,20 @@
         /// </summary>
         private readonly string InputFile;
 
-        private readonly Queue<(Actions, int)> instructions = new();
+        private readonly Queue<(Actions task, int value)> instructions = new();
         private readonly Dictionary<int,int> Signals = new();
+        public List<string> Display = new();
+        private string CRT = "";
 
         /// <summary>
         /// The Answer to Part A
         /// </summary>
-        override public int PartA => ComputePartA();
+        public int PartA => ComputePartA();
 
         /// <summary>
         /// The Answer to Part B
         /// </summary>
-        override public int PartB => ComputePartB();
+        public string PartB => ComputePartB();
 
 
         //CONSTRUCTOR
@@ -51,14 +57,76 @@
                 
                 if (x[0] == "noop")
                 {
+                    //noop takes one cycle to complete. It has no other effect.
                     instructions.Enqueue((Actions.noop, 0));
                 }
                 else
                 {
+                    //addx V takes two cycles to complete. After two cycles, the X register is increased by the value V.
                     instructions.Enqueue((Actions.addx, int.Parse(x[1])));
                 }
             }
+
+            ProcessSignals();
         }
+
+        private void GenerateCRT(int clock, int register)
+        {
+            int pixel = clock % 40; //clock - (40 * (clock / 40)) - 1;
+
+            if (Math.Abs(pixel - register) < 2)
+            {
+                CRT += "#";
+            }
+            else
+            {
+                CRT += ".";
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void ProcessSignals()
+        {
+            //The CPU has a single register, X, which starts with the value 1. 
+            int register = 1;
+            int clock = 0;
+            int wait = 0;
+            int value = 0;
+
+            while (instructions.Count > 0)
+            {
+                clock++;
+
+                if (wait == 0)
+                {
+                    register += value;
+                    Signals.Add(clock, register);
+                    GenerateCRT(clock, register);
+
+                    var instruction = instructions.Dequeue();
+
+                    if (instruction.task is Actions.noop)
+                    {
+                        value = instruction.value;
+                    }
+                    else if (instruction.task is Actions.addx)
+                    {
+                        value = instruction.value;
+                        wait++;
+                    }
+                }
+                else
+                {
+                    Signals.Add(clock, register);
+                    GenerateCRT(clock, register);
+                    wait--;
+                }
+            }
+        }
+
 
         /// <summary>
         /// Logic to Solve Question 1:
@@ -66,22 +134,6 @@
         /// </summary>
         private int ComputePartA()
         {
-            int clock = 0;
-            int register = 1;
-
-
-            foreach ((Actions action, int value) in instructions)
-            {
-                if (action is Actions.noop)
-                {
-                    Signals.Add(clock, register);
-                }
-                else
-                {
-                    Signals.Add(clock, register);
-                }
-            }
-
 
             //Signals to Index
             List<int> cycles = new() { 20, 60, 100, 140, 180, 220 };
@@ -100,11 +152,20 @@
 
         /// <summary>
         /// Logic to Solve Question 2:
-        /// 
+        /// What eight capital letters appear on your CRT?
         /// </summary>
-        private int ComputePartB()
+        private string ComputePartB()
         {
-            throw new NotImplementedException();
+            //Sprite 3pixel wide, x defines middle pixel.
+            //Display Size : 6 Rows, 40 Columns.
+
+            for (int i = 0; i < 6; i++)
+            {
+                int row = i * 40;
+                Display.Add(CRT.Substring(row, 40));
+            };
+
+            return CRT;
         }
     }
 }
