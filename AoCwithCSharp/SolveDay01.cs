@@ -30,7 +30,7 @@
         {
             Elves = new List<int>();
             InputFile = dataFilePath;
-            PouplateElfData();
+            ManipulateData();
         }
 
 
@@ -40,7 +40,7 @@
         /// Logic to Transform Data to Solve Questions:
         /// Populate the list of Elf from the text file
         /// </summary>
-        private void PouplateElfData()
+        private void ManipulateData()
         {
             int calorieSum = 0;
 
