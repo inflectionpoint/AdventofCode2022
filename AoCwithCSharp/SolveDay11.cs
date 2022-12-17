@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace AoCwithCSharp
+﻿namespace AoCwithCSharp
 {
     public class SolveDay11 //
     {
@@ -11,7 +9,7 @@ namespace AoCwithCSharp
         /// </summary>
         private readonly string InputFile;
 
-        private readonly Dictionary<int, Monkey> Monkeys= new();
+        private readonly Dictionary<int, Monkey> Monkeys = new();
 
         private long Factor = 0;
 
@@ -32,7 +30,7 @@ namespace AoCwithCSharp
             InputFile = dataFilePath;
             ManipulateData();
         }
-        
+
 
         //METHODS
 
@@ -48,7 +46,7 @@ namespace AoCwithCSharp
             for (int i = 0; i < x.Count; i += 7)
             {
                 Monkey monkey = new();
-                
+
                 Queue<long> worries = new();
 
                 var rowA = x[i + 1][18..].Replace(" ", "").Split(",").ToList();
@@ -61,7 +59,7 @@ namespace AoCwithCSharp
                 {
                     worries.Enqueue(long.Parse(item));
                 }
-                
+
                 monkey.WorryItems = worries;
                 monkey.OperationType = rowB[0];
                 monkey.TestValue = long.Parse(rowC);
@@ -75,10 +73,10 @@ namespace AoCwithCSharp
                 {
                     monkey.OperationValue = long.Parse(rowB[1]);
                 }
-                
+
                 Monkeys.Add(i / 7, monkey);
 
-            } 
+            }
         }
 
         /// <summary>
@@ -190,7 +188,7 @@ namespace AoCwithCSharp
                 {
                     y %= factor;
                 }
-                
+
 
                 if (y % TestValue == 0)
                 {

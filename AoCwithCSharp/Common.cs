@@ -1,14 +1,12 @@
-﻿using System.Security;
-
-namespace AoCwithCSharp
+﻿namespace AoCwithCSharp
 {
     /// <summary>
     /// Abstract Class to Format Solvers for Integer Answers
     /// </summary>
     abstract public class SolverInt
     {
-        abstract public  int PartA { get; }
-        abstract public  int PartB { get; }
+        abstract public int PartA { get; }
+        abstract public int PartB { get; }
     }
 
     /// <summary>

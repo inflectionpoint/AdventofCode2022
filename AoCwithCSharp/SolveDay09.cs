@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using System.Runtime.ExceptionServices;
 
 namespace AoCwithCSharp
 {
@@ -31,7 +30,7 @@ namespace AoCwithCSharp
             InputFile = dataFilePath;
             ManipulateData();
         }
-        
+
 
         //METHODS
 
@@ -51,7 +50,7 @@ namespace AoCwithCSharp
         private Point MoveFollower(Point head, Point tail)
         {
             Size delta = new(head.X - tail.X, head.Y - tail.Y);
-            
+
             string derp = delta.ToString();
 
             switch (derp)
@@ -76,8 +75,8 @@ namespace AoCwithCSharp
                 case "{Width=2, Height=1}":
                 case "{Width=1, Height=2}":
                 case "{Width=2, Height=2}":
-                    tail.X++;                  
-                    tail.Y++;                  
+                    tail.X++;
+                    tail.Y++;
                     return tail;
                 //NORTH WEST
                 case "{Width=-2, Height=1}":
@@ -118,7 +117,7 @@ namespace AoCwithCSharp
             {
                 case "U":
                     head.Y++;
-                    return head;                
+                    return head;
                 case "D":
                     head.Y--;
                     return head;
@@ -174,7 +173,7 @@ namespace AoCwithCSharp
             {
                 rope.Last().ToString()
             };
-                
+
             //Total Movement required
             foreach ((string direction, int steps) in Movements)
             {
@@ -187,7 +186,7 @@ namespace AoCwithCSharp
                     tailPositions.Add(rope.Last().ToString());
                 }
             }
-            
+
             return tailPositions.Distinct().Count();
         }
 

@@ -42,7 +42,7 @@
 
             foreach (string line in File.ReadLines(InputFile))
             {
-                var x = line.Replace("$ ","").Split(" ");
+                var x = line.Replace("$ ", "").Split(" ");
 
                 //CD = Change Directories 
                 if (x[0] == "cd")
@@ -78,7 +78,7 @@
                         string filePath = $"{currentPath}{x[1]}";
 
                         //Added Files to Structure, Not Required for Problem Set.
-                        Nodes.Add(filePath, new Node { Parent = currentPath, Size = size , Type = "file"});
+                        Nodes.Add(filePath, new Node { Parent = currentPath, Size = size, Type = "file" });
 
                         //Set the parent Path for the Loop
                         string parentPath = Nodes[filePath].Parent;
@@ -94,7 +94,7 @@
                 }
             }
         }
-        
+
 
         /// <summary>
         /// Logic to Solve Question 1:
@@ -103,7 +103,7 @@
         private int ComputePartA()
         {
             //Return a total size of directories that are smaller than 100,000.
-            return Nodes.Select(x => x).Where(x => x.Value.Size <= 100_000 
+            return Nodes.Select(x => x).Where(x => x.Value.Size <= 100_000
                 && x.Value.Type == "dir").Select(y => y.Value.Size).Sum();
         }
 
@@ -119,7 +119,7 @@
 
             int deltaRequired = 30000000 - (70000000 - Nodes["/"].Size);
 
-            return Nodes.Select(x => x).Where(x => x.Value.Size >= deltaRequired 
+            return Nodes.Select(x => x).Where(x => x.Value.Size >= deltaRequired
                 && x.Value.Type == "dir").OrderBy(x => x.Value.Size).First().Value.Size;
 
         }

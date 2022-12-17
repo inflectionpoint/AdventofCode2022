@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace AoCwithCSharp
+﻿namespace AoCwithCSharp
 {
     public class SolveDay08 : SolverInt
     {
@@ -32,7 +30,7 @@ namespace AoCwithCSharp
             InputFile = dataFilePath;
             ManipulateData();
         }
-        
+
 
         //METHODS
 
@@ -58,7 +56,7 @@ namespace AoCwithCSharp
                     int height = int.Parse(d[j].ToString());
 
                     //Intialize Tree Heights, All Edge Trees ARE visible. 
-                    if (i == 0 || j == 0 || i == Rows-1 || j == Cols-1)
+                    if (i == 0 || j == 0 || i == Rows - 1 || j == Cols - 1)
                     {
                         Trees[i, j] = (height, true, 0);
                     }
@@ -67,7 +65,7 @@ namespace AoCwithCSharp
                     {
                         Trees[i, j] = (height, false, 0);
                     }
-                    
+
                 }
             }
         }
@@ -100,7 +98,7 @@ namespace AoCwithCSharp
 
                     if (height > heightLimit)
                     {
-                        heightLimit = height; 
+                        heightLimit = height;
                         Trees[row, col] = (height, true, 0);
                     }
                 }
@@ -185,7 +183,7 @@ namespace AoCwithCSharp
                 }
             }
 
-            return totalTrees; 
+            return totalTrees;
         }
 
         /// <summary>
@@ -203,7 +201,7 @@ namespace AoCwithCSharp
                 for (int col = 1; col <= Cols - 2; col++)
                 {
                     int tree;
-                    int myTree = Trees[row,col].height;
+                    int myTree = Trees[row, col].height;
 
                     int scoreLeft = 0;
                     int scoreRight = 0;
@@ -229,7 +227,7 @@ namespace AoCwithCSharp
                     for (int i = 1; i < (Cols - col); i++)
                     {
                         tree = Trees[row, col + i].height;
-                        if (tree < myTree )
+                        if (tree < myTree)
                         {
                             scoreRight++;
                         }
@@ -261,7 +259,7 @@ namespace AoCwithCSharp
                         {
                             scoreBelow++;
                         }
-                        else 
+                        else
                         {
                             scoreBelow++;
                             break;
@@ -272,7 +270,7 @@ namespace AoCwithCSharp
                     int score = scoreLeft * scoreRight * scoreAbove * scoreBelow;
 
                     Trees[row, col] = (Trees[row, col].height, Trees[row, col].isVisible, score);
-                    
+
                     if (score > maxScore)
                     {
                         maxScore = score;

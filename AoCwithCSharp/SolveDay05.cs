@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-
-namespace AoCwithCSharp
+﻿namespace AoCwithCSharp
 {
     public class SolveDay05 : SolverStr
     {

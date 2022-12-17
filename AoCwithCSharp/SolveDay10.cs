@@ -1,10 +1,6 @@
-﻿using Microsoft.Win32;
-using System.Collections;
-using System.Formats.Asn1;
-
-namespace AoCwithCSharp
+﻿namespace AoCwithCSharp
 {
-    public class SolveDay10 
+    public class SolveDay10
     {
         enum Actions
         {
@@ -20,7 +16,7 @@ namespace AoCwithCSharp
         private readonly string InputFile;
 
         private readonly Queue<(Actions task, int value)> instructions = new();
-        private readonly Dictionary<int,int> Signals = new();
+        private readonly Dictionary<int, int> Signals = new();
         public List<string> Display = new();
         private string CRT = "";
 
@@ -41,7 +37,7 @@ namespace AoCwithCSharp
             InputFile = dataFilePath;
             ManipulateData();
         }
-        
+
 
         //METHODS
 
@@ -54,7 +50,7 @@ namespace AoCwithCSharp
             foreach (string line in File.ReadLines(InputFile))
             {
                 var x = line.Split(" ");
-                
+
                 if (x[0] == "noop")
                 {
                     //noop takes one cycle to complete. It has no other effect.
@@ -145,7 +141,7 @@ namespace AoCwithCSharp
             {
                 totalSignal += cycle * Signals[cycle];
             }
-            
+
             return totalSignal;
 
         }
