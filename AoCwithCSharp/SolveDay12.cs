@@ -1,4 +1,6 @@
-﻿namespace AoCwithCSharp
+﻿using AoCwithCSharp.Supporting;
+
+namespace AoCwithCSharp
 {
     public class SolveDay12 : SolverInt
     {
@@ -58,12 +60,12 @@
                     if (z[col] == -13)
                     {
                         Start = (row, col);
-                        HeightMap[row, col] = 0;
+                        HeightMap[row, col] = 1;
                     }
                     else if (z[col] == -27)
                     {
                         Finish = (row, col);
-                        HeightMap[row, col] = 27;
+                        HeightMap[row, col] = 26;
                     }
                     else
                     {
@@ -82,12 +84,23 @@
         /// </summary>
         private int ComputePartA()
         {
-            while (true)
+            //Transervse the Array from height 0 to height 27, return the number of steps required 
+
+            int stepCount = 0;
+            int height = 0;
+
+            while (height != 27)
             {
+                stepCount++;
+                
+                if (true)
+                {
+
+                }
 
             }
 
-            return 0;
+            return stepCount;
         }
 
         /// <summary>
@@ -98,5 +111,6 @@
         {
             throw new NotImplementedException();
         }
+
     }
 }

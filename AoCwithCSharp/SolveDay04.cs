@@ -1,4 +1,6 @@
-﻿namespace AoCwithCSharp
+﻿using AoCwithCSharp.Supporting;
+
+namespace AoCwithCSharp
 {
     public class SolveDay04 : SolverInt
     {

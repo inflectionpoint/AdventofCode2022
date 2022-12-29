@@ -1,4 +1,4 @@
-﻿namespace AoCwithCSharp
+﻿namespace AoCwithCSharp.Supporting
 {
     /// <summary>
     /// Abstract Class to Format Solvers for Integer Answers
